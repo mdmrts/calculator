@@ -38,3 +38,4 @@ def test_calculator_divide():
 
     result1 = calc.divide_numbers(2,0)
     assert result1 == 0
+
