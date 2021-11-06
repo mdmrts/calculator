@@ -8,7 +8,7 @@ def test_calculator_result():
 
 def test_calculator_add():
     """Testing the Add function of the calculator"""
-    #Arrange by instantiating the calc class
+    #Arrange by instantiating the calculator class
     calc = Calculator()
     #Act by calling the method to be tested
     calc.add_number(4)
