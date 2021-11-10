@@ -2,7 +2,7 @@
 #this is called a namespace it is like files and folders the classes are files and the folders organize the classes
 #It looks like a folder and file path but it is sort of a virtual representation of how the program is organized
 
-from calc.calculation import Calculation
+from calc.calculation import Calculator
 
 #This is how you extend the Addition class with the Calculation
 class Multiplication(Calculation):
