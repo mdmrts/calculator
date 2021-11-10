@@ -55,7 +55,7 @@ def test_calculator_multiply(clear_history):
 
 def test_calculator_divide(clear_history):
     """ tests multiplication of two numbers"""
-     # pylint: disable=unused-argument,redefined-outer-name,singleton-comparison
-     assert Calculator.divide_numbers(4, 2) == 2
-     with pytest.raises(ZeroDivisionError):
-         Calculator.divide_numbers(4, 0)
+    #pylint: disable=unused-argument,redefined-outer-name,singleton-comparison
+    assert Calculator.divide_numbers(4, 2) == 2
+    with pytest.raises(ZeroDivisionError):
+        Calculator.divide_numbers(4, 0)
