@@ -5,10 +5,10 @@ inherits the value A and value B from the calculation class"""
 #It looks like a folder and file path but
 # it is sort of a virtual representation of how the program is organized
 
-from calc.calculation import Calculation
+from calc.calculation import Calculator
 
 #This is how you extend the Addition class with the Calculation
-class Division(Calculation):
+class Division(Calculator):
     """The addition class has one method to
     get the result of the the calculation A and B come from
     the calculation parent class"""
@@ -18,4 +18,4 @@ class Division(Calculation):
         try:
             return self.value_a / self.value_b
         except ZeroDivisionError as err:
-            raise ZeroDivisionError from err
+            raise ZeroDivisionError(err)
