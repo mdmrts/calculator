@@ -1,6 +1,7 @@
 """ This is the increment function"""
 #first import the addition namespace
 from calc.addition import Addition
+from calc.division import Division
 from calc.subtraction import Subtraction
 from calc.multiplication import Multiplication
 class Calculator:
@@ -48,7 +49,6 @@ class Calculator:
         #this is a shorthand way to create the multiplication object and added it the history in one line
         Calculator.add_calculation_to_history(Multiplication.create(value_a,value_b))
         return Calculator.get_result_of_last_calculation_added_to_history()
-    @staticmethod
     def divide_numbers(value_a, value_b):
         """divide two numbers and
         store the result"""
