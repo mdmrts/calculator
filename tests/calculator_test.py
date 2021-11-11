@@ -3,16 +3,19 @@ import pprint
 
 import pytest
 
-from calculator.main import Calculator
+from calculator.calculator import Calculator
 
-#this is how you define a function that will run each time
-# you pass it to a test, it is called a fixture
+#this is how you define a function
+# that will run each time you pass it to a test, it is called a fixture
 @pytest.fixture
 def clear_history():
+    """Testing the Add function of the calculator"""
+    # pylint: disable=unused-argument,redefined-outer-name,singleton-comparison
     Calculator.clear_history()
 
 def test_calculator_add(clear_history):
     """Testing the Add function of the calculator"""
+    # pylint: disable=unused-argument,redefined-outer-name,singleton-comparison
     assert Calculator.add_number(1,2) == 3
     assert Calculator.add_number(2, 2) == 4
     assert Calculator.add_number(3, 2) == 5
@@ -22,6 +25,8 @@ def test_calculator_add(clear_history):
     pprint.pprint(Calculator.history)
 
 def test_clear_history(clear_history):
+    """Testing the Add function of the calculator"""
+    # pylint: disable=unused-argument,redefined-outer-name,singleton-comparison
     assert Calculator.add_number(1,2) == 3
     assert Calculator.add_number(2, 2) == 4
     assert Calculator.add_number(3, 2) == 5
@@ -31,32 +36,40 @@ def test_clear_history(clear_history):
     assert Calculator.history_count() == 0
 
 def test_count_history(clear_history):
+    """Testing the subtract method of the calculator"""
+    # pylint: disable=unused-argument,redefined-outer-name,singleton-comparison
     assert Calculator.history_count() == 0
     assert Calculator.add_number(2, 2) == 4
     assert Calculator.add_number(3, 2) == 5
     assert Calculator.history_count() == 2
 
 def test_get_last_calculation_result(clear_history):
+    """Testing the subtract method of the calculator"""
+    # pylint: disable=unused-argument,redefined-outer-name,singleton-comparison
     assert Calculator.add_number(2, 2) == 4
     assert Calculator.add_number(3, 2) == 5
     assert Calculator.get_result_of_last_calculation_added_to_history() == 5
 
 def test_get_first_calculation_result(clear_history):
+    """Testing the subtract method of the calculator"""
+    # pylint: disable=unused-argument,redefined-outer-name,singleton-comparison
     assert Calculator.add_number(2, 2) == 4
     assert Calculator.add_number(3, 2) == 5
     assert Calculator.get_result_of_first_calculation_added_to_history() == 4
 
 def test_calculator_subtract(clear_history):
     """Testing the subtract method of the calculator"""
+    # pylint: disable=unused-argument,redefined-outer-name,singleton-comparison
     assert Calculator.subtract_number(1, 2) == -1
 
 def test_calculator_multiply(clear_history):
     """ tests multiplication of two numbers"""
+    # pylint: disable=unused-argument,redefined-outer-name,singleton-comparison
     assert Calculator.multiply_numbers(1,2) == 2
 
 def test_calculator_divide(clear_history):
     """ tests multiplication of two numbers"""
-    #pylint: disable=unused-argument,redefined-outer-name,singleton-comparison
-    assert Calculator.divide_numbers(4, 2) == 2
+    # pylint: disable=unused-argument,redefined-outer-name,singleton-comparison
+    assert Calculator.divide_numbers(4,2) == 2
     with pytest.raises(ZeroDivisionError):
-        Calculator.divide_numbers(4, 0)
+        Calculator.divide_numbers(4,0)

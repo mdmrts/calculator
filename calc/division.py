@@ -18,4 +18,4 @@ class Division(Calculation):
         try:
             return self.value_a / self.value_b
         except ZeroDivisionError as err:
-            raise ZeroDivisionError(err)
+            raise ZeroDivisionError from err
