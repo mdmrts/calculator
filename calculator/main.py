@@ -21,10 +21,13 @@ class Calculator:
         Calculator.history.append(calculation)
         return True
 
+
+
     @staticmethod
     def get_result_of_last_calculation_added_to_history():
         """Returns the most recent value in the history"""
         return Calculator.history[-1].get_result()
+
 
     @staticmethod
     def get_result_of_first_calculation_added_to_history():
@@ -63,3 +66,7 @@ class Calculator:
         division = Division.create(value_a, value_b)
         Calculator.add_calculation_to_history(division)
         return Calculator.get_result_of_last_calculation_added_to_history()
+    @staticmethod
+    def get_last_object():
+        """Returns the most recent object of the calculator history"""
+        return Calculator.history[-1]

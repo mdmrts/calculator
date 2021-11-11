@@ -88,3 +88,11 @@ def test_calculator_divide_by_zero(clear_history):
     # pylint: disable=unused-argument
     calc = Calculator()
     assert calc.divide_numbers(6, 0) == "Error, cannot divide by zero."
+
+    def test_last_object(clear_history):
+        """Tests the last object function for the calculator class"""
+        # pylint: disable=redefined-outer-name, unused-argument
+        Calculator.divide_numbers(8, 8)
+        Calculator.multiply_numbers(2, 3)
+        Calculator.add_numbers(2, 3)
+        assert isinstance(Calculator.get_last_object(), Addition) is True
