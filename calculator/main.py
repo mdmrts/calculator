@@ -11,6 +11,7 @@ class Calculator:
 
     @staticmethod
     def clear_history():
+        """Clears all values in history"""
         Calculator.history.clear()
         return True
 
