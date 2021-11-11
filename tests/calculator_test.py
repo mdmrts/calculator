@@ -5,7 +5,8 @@ import pytest
 
 from calculator.main import Calculator
 
-#this is how you define a function that will run each time you pass it to a test, it is called a fixture
+#this is how you define a function that will run each time
+# you pass it to a test, it is called a fixture
 @pytest.fixture
 def clear_history():
     Calculator.clear_history()
