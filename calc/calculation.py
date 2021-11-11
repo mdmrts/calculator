@@ -16,5 +16,3 @@ class Calculation:
     def create(cls, value_a, value_b):
         """ Class """
         return cls(value_a,value_b)
-
-
