@@ -13,11 +13,11 @@ def test_calculator_add(clear_history):
     # pylint: disable=redefined-outer-name
     # pylint: disable=unused-argument
     calc = Calculator()
-    assert calc.add_number(3, 5) == 8
-    assert calc.add_number(2, 5) == 7
-    assert calc.add_number(1, 9) == 10
-    assert calc.add_number(7, 5) == 12
-    assert calc.add_number(10, 6) == 16
+    assert calc.add_numbers(3, 5) == 8
+    assert calc.add_numbers(2, 5) == 7
+    assert calc.add_numbers(1, 9) == 10
+    assert calc.add_numbers(7, 5) == 12
+    assert calc.add_numbers(10, 6) == 16
     assert calc.history_count() == 5
     assert calc.get_result_of_last_calculation_added_to_history() == 16
 
@@ -26,7 +26,7 @@ def test_calculator_subtract(clear_history):
     # pylint: disable=redefined-outer-name
     # pylint: disable=unused-argument
     calc = Calculator()
-    assert calc.subtract_number(0, 5) == -5
+    assert calc.subtract_numbers(0, 5) == -5
 
 def test_calculator_multiply(clear_history):
     """Testing the multiply method of the calculator"""
@@ -54,8 +54,8 @@ def test_clear_history(clear_history):
     # pylint: disable=redefined-outer-name
     # pylint: disable=unused-argument
     calc = Calculator()
-    assert calc.add_number(3, 5) == 8
-    assert calc.subtract_number(0, 5) == -5
+    assert calc.add_numbers(3, 5) == 8
+    assert calc.subtract_numbers(0, 5) == -5
     assert calc.multiply_numbers(4, 5) == 20
     assert calc.divide_numbers(18, 3) == 6
     assert calc.clear_history() is True
@@ -67,8 +67,8 @@ def test_count_history(clear_history):
     # pylint: disable=unused-argument
     calc = Calculator()
     assert calc.history_count() == 0
-    assert calc.add_number(3, 5) == 8
-    assert calc.subtract_number(0, 5) == -5
+    assert calc.add_numbers(3, 5) == 8
+    assert calc.subtract_numbers(0, 5) == -5
     assert calc.history_count() == 2
 
 def test_get_last_calculation_result(clear_history):
@@ -76,7 +76,7 @@ def test_get_last_calculation_result(clear_history):
     # pylint: disable=redefined-outer-name
     # pylint: disable=unused-argument
     calc = Calculator()
-    assert calc.add_number(3, 5) == 8
+    assert calc.add_numbers(3, 5) == 8
     assert calc.multiply_numbers(4, 5) == 20
     assert calc.get_result_of_last_calculation_added_to_history() == 20
 
@@ -85,6 +85,6 @@ def test_get_first_calculation_result(clear_history):
     # pylint: disable=redefined-outer-name
     # pylint: disable=unused-argument
     calc = Calculator()
-    assert calc.add_number(3, 5) == 8
+    assert calc.add_numbers(3, 5) == 8
     assert calc.multiply_numbers(4, 5) == 20
     assert calc.get_result_of_first_calculation_added_to_history() == 8
