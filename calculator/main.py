@@ -5,13 +5,12 @@ from calc.multiplication import Multiplication
 from calc.division import Division
 
 class Calculator:
-    """ This is my Calculator class"""
+    """ This is the Calculator class"""
 
     history = []
 
     @staticmethod
     def clear_history():
-        """Clears all values in history"""
         Calculator.history.clear()
         return True
 
