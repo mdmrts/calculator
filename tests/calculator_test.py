@@ -16,9 +16,9 @@ def test_calculator_add(clear_history):
     assert calc.add_numbers(4, 5) == 9
     assert calc.add_numbers(3, 8) == 11
     assert calc.add_numbers(2, 7) == 9
-    assert calc.add_numbers(11, 7) == 19
+    assert calc.add_numbers(11, 7) == 18
     assert calc.history_count() == 4
-    assert calc.get_result_of_last_calculation_added_to_history() == 19
+    assert calc.get_result_of_last_calculation_added_to_history() == 18
 
 
 def test_clear_history(clear_history):
