@@ -68,8 +68,16 @@ def test_calculator_multiply(clear_history):
     assert Calculator.multiply_numbers(1,2) == 2
 
 def test_calculator_divide(clear_history):
-    """ tests multiplication of two numbers"""
-    # pylint: disable=unused-argument,redefined-outer-name,singleton-comparison
-    assert Calculator.divide_numbers(4,2) == 2
-    with pytest.raises(ZeroDivisionError):
-        Calculator.divide_numbers(4,0)
+    """Testing the divide method of the calculator"""
+    # pylint: disable=redefined-outer-name
+    # pylint: disable=unused-argument
+    calc = Calculator()
+    assert calc.divide_numbers(18, 3) == 6
+
+ def test_calculator_divide_by_zero(clear_history):
+    """Testing the divide method of the calculator if someone attempts to divide by zero"""
+    # pylint: disable=redefined-outer-name
+    # pylint: disable=unused-argument
+    calc = Calculator()
+    assert calc.divide_numbers(4, 0) == "Error, cannot divide by zero."
+

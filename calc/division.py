@@ -1,21 +1,13 @@
-"""This is the addition calculation that is being
-inherits the value A and value B from the calculation class"""
-#this is called a namespace it is like files and
-# folders the classes are files and the folders organize the classes
-#It looks like a folder and file path but
-# it is sort of a virtual representation of how the program is organized
+        """This is the division calculation. Values A and B come from the Calculation class"""
+        from calc.calculation import Calculation
 
-from calc.calculation import Calculation
+        class Division(Calculation):
+            """The Division class has one method, to get the result of the calculation.
+            A and B come from the Calculation parent Class"""
 
-#This is how you extend the Addition class with the Calculation
-class Division(Calculation):
-    """The addition class has one method to
-    get the result of the the calculation A and B come from
-    the calculation parent class"""
-    def get_result(self):
-        """you need to use self to reference the
-         data contained in the instance of the object.  This is encapsulation"""
-        try:
-            return self.value_a / self.value_b
-        except ZeroDivisionError as err:
-            raise ZeroDivisionError from err
+            def get_result(self):
+                """This does the actual division. Displays an error if dividing by 0"""
+                if self.value_b == 0:
+                    return "Error, cannot divide by zero."
+                return self.value_a / self.value_b
+
