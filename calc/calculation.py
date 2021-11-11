@@ -14,5 +14,4 @@ class Calculation:
     # the class and not the instance of the class
     @classmethod
     def create(cls, value_a, value_b):
-        """ Class """
         return cls(value_a,value_b)

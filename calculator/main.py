@@ -5,37 +5,30 @@ from calc.subtraction import Subtraction
 from calc.multiplication import Multiplication
 from calc.division import Division
 class Calculator:
-    """This
-     is the
+    """This is the
     Calculator class"""
     history = []
     @staticmethod
     def get_result_of_first_calculation_added_to_history():
-        """adds number to
-        result"""
         return Calculator.history[0].get_result()
 
     @staticmethod
     def clear_history():
-        """adds number to result"""
         Calculator.history.clear()
         return True
 
     @staticmethod
     def history_count():
-        """adds number to result"""
         return len(Calculator.history)
 
     @staticmethod
     def add_calculation_to_history(calculation):
-        """adds number to result"""
         Calculator.history.append(calculation)
         return True
 
     @staticmethod
     def get_result_of_last_calculation_added_to_history():
-        """adds number to result"""
-        # -1 gets the last item added to the list automaticly
+        # -1 gets the last item added to the list automatically
         # and you can expect it to have the get result method
         return Calculator.history[-1].get_result()
 
