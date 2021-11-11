@@ -10,16 +10,21 @@ def clear_history():
 
 def test_calculator_add(clear_history):
     """Testing the add method of the calculator"""
+    # pylint: disable=redefined-outer-name
+    # pylint: disable=unused-argument
     calc = Calculator()
-    assert calc.add_number(4, 5) == 9
-    assert calc.add_number(1, 6) == 7
-    assert calc.add_number(3, 8) == 11
-    assert calc.add_number(2, 11) == 13
-    assert calc.history_count() == 4
-    assert calc.get_result_of_last_calculation_added_to_history() == 13
+    assert calc.add_number(3, 5) == 8
+    assert calc.add_number(2, 5) == 7
+    assert calc.add_number(1, 9) == 10
+    assert calc.add_number(7, 5) == 12
+    assert calc.add_number(10, 6) == 16
+    assert calc.history_count() == 5
+    assert calc.get_result_of_last_calculation_added_to_history() == 16
 
 def test_calculator_subtract(clear_history):
     """Testing the subtract method of the calculator"""
+    # pylint: disable=redefined-outer-name
+    # pylint: disable=unused-argument
     calc = Calculator()
     assert calc.subtract_number(0, 5) == -5
 
