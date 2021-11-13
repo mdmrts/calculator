@@ -5,5 +5,5 @@ class Addition(Calculation):
     """The Addition class has one method, to get the result of the calculation.
     A and B come from the Calculation parent Class"""
     def get_result(self):
-        """This does the actual addition"""
+        """Gets the result of the addition object"""
         return self.value_a + self.value_b

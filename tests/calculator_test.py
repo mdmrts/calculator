@@ -97,3 +97,12 @@ def test_last_object(clear_history):
     Calculator.multiply_numbers(2, 3)
     Calculator.add_numbers(2, 3)
     assert isinstance(Calculator.get_last_object(), Addition) is True
+def test_get_history(clear_history):
+    """Tests the get history function"""
+    # pylint: disable=redefined-outer-name
+    # pylint: disable=unused-argument
+    calc = Calculator()
+    assert calc.add_numbers(5, 9) == 14
+    assert calc.add_numbers(3, 8) == 11
+    assert calc.add_numbers(5, 3) == 8
+    assert calc.get_history() == Calculator.history

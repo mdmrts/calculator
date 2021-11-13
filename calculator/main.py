@@ -11,13 +11,13 @@ class Calculator:
 
     @staticmethod
     def clear_history():
-        """Clears all values in history"""
+        """Clears all values in the history"""
         Calculator.history.clear()
         return True
 
     @staticmethod
     def add_calculation_to_history(calculation):
-        """Adds whatever calculation was just done to history"""
+        """Adds  calculation to the history"""
         Calculator.history.append(calculation)
         return True
 
@@ -36,7 +36,7 @@ class Calculator:
 
     @staticmethod
     def history_count():
-        """Returns the number of items in history"""
+        """Returns the number of items in the history"""
         return len(Calculator.history)
 
     @staticmethod
@@ -62,7 +62,7 @@ class Calculator:
 
     @staticmethod
     def divide_numbers(value_a, value_b):
-        """divides value_a by value_b, displays an error if value_b is 0"""
+        """divides value_a by value_b, shows an error if value_b is 0"""
         division = Division.create(value_a, value_b)
         Calculator.add_calculation_to_history(division)
         return Calculator.get_result_of_last_calculation_added_to_history()
@@ -70,3 +70,8 @@ class Calculator:
     def get_last_object():
         """Returns the most recent object of the calculator history"""
         return Calculator.history[-1]
+
+    @staticmethod
+    def get_history():
+        """Returns the full history"""
+        return Calculator.history
