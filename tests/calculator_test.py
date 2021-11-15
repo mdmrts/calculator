@@ -34,6 +34,7 @@ def test_clear_history(clear_history):
     assert calc.clear_history() is True
     assert calc.history_count() == 0
 
+
 def test_count_history(clear_history):
     """Tests that the count history function works"""
     # pylint: disable=redefined-outer-name
