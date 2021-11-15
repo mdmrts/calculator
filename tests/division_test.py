@@ -9,7 +9,7 @@ def test_calculation_division():
     division = Division(mynumbers)
     #Act
     #Assert
-    assert division.get_result() == 0.0625
+    assert division.get_result() == 0.015625
 
 def test_calculator_division_exception():
     """ Testing division exception for division by zero"""
