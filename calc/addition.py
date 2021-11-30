@@ -1,4 +1,5 @@
 """This is the addition calculation. Values A and B come from the Calculation class"""
+# noinspection PyUnresolvedReferences,PyPackageRequirements
 from calc.calculation import Calculation
 
 class Addition(Calculation):
