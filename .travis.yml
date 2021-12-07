@@ -9,5 +9,5 @@ script:
 
 branches:
   only:
-    - csv
+    - hw_flash
     - development
