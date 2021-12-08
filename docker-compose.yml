@@ -12,7 +12,7 @@ services:
     volumes:
       - .:/home/myuser
   nginx:
-    build: ./nginx
+    build: ./ngnix
     container_name: nginx
     restart: always
     ports:
