@@ -28,3 +28,12 @@ class Calculations:
     def add_calculation(calculation):
         """ get a specific calculation from history"""
         return Calculations.history.append(calculation)
+
+    @staticmethod
+    def readHistoryFromCSV():
+        """Read the histroy from csv and put it"""
+
+    @staticmethod
+    def writeHistroyToCSV():
+        """Write the history to csv file"""
+        #pylint:disable=too-few-public-methods
